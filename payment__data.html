@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+          rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.theme.min.css">
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <title>Card information</title>
+</head>
+<body>
+    <header class="golden">
+        <nav>
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="right">
+                            <a href="index.html" class="logo"><img src="../images/icons/logo.png" alt="logo"></a>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                                <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="left">
+                            <div> <a href="#" class="search__calendar">
+                                <img id="calendar" src="../images/icons/calendar.svg" alt="calendar">
+                                <input type="text" id="datepicker" class="date"></a>
+                                <select name="performance__type">
+                                    <option value="">Вид вистави</option>
+                                    <option value="1">Балет</option>
+                                    <option value="2">Опера</option>
+                                </select> </div>
+                            <input class="header__search" type="search" id="header__search" placeholder="Знайти виставу..">
+                            <button class="header__btn">Пошук</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="data__payment">
+        <div class="container-lg">
+            <div class="data__payment__flex">
+                <div class="subheader">Дані для оплати</div>
+                <a href="payment__personal__data.html" class="more">Повернутися назад</a>
+            </div>
+            <div class="data__payment__info">
+                <div class="data__payment__info__card">
+                    <div class="data__payment__info__subheader">Інформація про картку</div>
+                    <form action="">
+                        <div class="data__payment__info__text">Ім’я власника картки</div>
+                        <input type="text" id="card__name" placeholder="John Travolta">
+                        <div class="data__payment__info__text">Ім’я власника картки</div>
+                        <input type="tel" id="card__number" pattern="\d*" maxlength="19" placeholder="**** **** **** ****">
+                        <div class="flex">
+                            <div class="card__term">
+                                <div class="data__payment__info__text">Строк закінчення дії</div>
+                                <div class="card__term__flex">
+                                    <select id="card__month">
+                                        <option value="1">Січень</option>
+                                        <option value="2">Лютий</option>
+                                        <option value="3">Березень</option>
+                                        <option value="4">Квітень</option>
+                                    </select>
+                                    <input  id="card__year" type="tel" pattern="\d*" maxlength="7" placeholder="2024">
+                                </div>
+                            </div>
+                            <div class="card__cvc">
+                                <div class="data__payment__info__text">CVC</div>
+                                <input id="card_cvc" type="tel" pattern="\d*" maxlength="4" placeholder="745">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="data__payment__info__line"></div>
+                <div class="data__payment__info__performance">
+                    <div class="data__payment__info__subheader">Інформація про картку</div>
+                    <div class="flex">
+                        <div class="data__payment__info__text">Назва: </div>
+                        <div class="data__payment__info__text">Опера “Жизель” </div>
+                    </div>
+                    <div class="flex">
+                        <div class="data__payment__info__text">Дата:   </div>
+                        <div class="data__payment__info__text">24.09.2022, 18:30 </div>
+                    </div>
+                    <div class="flex">
+                        <div class="data__payment__info__text">Тип:   </div>
+                        <div class="data__payment__info__text">e-квиток  </div>
+                    </div>
+                    <div class="flex">
+                        <div class="data__payment__info__text">Включено: </div>
+                        <div class="data__payment__info__text bold">310 грн х 2 </div>
+                    </div>
+                    <div class="flex">
+                        <div class="data__payment__info__text bold">Усього: </div>
+                        <div class="data__payment__info__text bold">620 грн </div>
+                    </div>
+                    <a href="payment_success.html" class="data__payment__info__btn">Сплатити 620 ₴</a>
+                </div>
+            </div>
+            <a href="index.html" class="more hidden">Повернутися на головну</a>
+        </div>
+    </section>
+    <footer>
+        <div class="container-lg">
+            <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+                <div class="footer__logo">
+                    <a href="index.html"><img src="../images/icons/logo-footer.png" alt="logo-footer"></a>
+                    <div class="theatre__title">Одеський національний академічний театр опери та балету</div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="menu__footer">
+                <div class="col-lg-3">
+                    <div class="contact">
+                        <div class="contact__title">Контакти:</div>
+                        <div class="contact__subtitle">Каси:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        <div class="contact__subtitle">Приймальня:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        <div class="contact__subtitle">Для преси:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="middle">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                            <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                            <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                        </ul>
+                        <div class="subscription">
+                            <div class="subscription__text">Підпишіться на новини та анонси подій</div>
+                            <form action="">
+                                <input type="email" placeholder="Уведіть пошту..">
+                                <button class="subscription__subscribe">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="social">
+                        <div class="contact__title">Соціальні мережі:</div>
+                        <a href="#" class="social__link"><img src="../images/icons/instagram.svg" alt="instagram"></a>
+                        <a href="#" class="social__link"><img src="../images/icons/twitter.svg" alt="twitter"></a>
+                        <a href="#" class="social__link"><img src="../images/icons/facebook.svg" alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden menu__footer">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                        <div class="middle">
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                                <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="row">
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Каси:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Приймальня:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Для преси:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-3 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/instagram.svg" alt="instagram"></a>
+                        </div>
+                        <div class="col-sm-2 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/twitter.svg" alt="twitter"></a>
+                        </div>
+                        <div class="col-sm-2 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/facebook.svg" alt="facebook"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscription">
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1">
+                            <div class="subscription__text">Підпишіться на новини та анонси подій</div>
+                            <form action="">
+                                <input type="email" placeholder="Уведіть пошту..">
+                                <button class="subscription__subscribe">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">©2022 Одеський Національний Академічний театр Опери та Балету. Всі права захищені.</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/datepicker-uk.js"></script>
+</body>
+</html>

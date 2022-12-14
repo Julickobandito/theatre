@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="театр, вистави, Національний, Академічний, Одеса">
+    <meta name="description" content="Офіційна сторінка Одеського національного академічного театру опери та балету,
+    вул. Чайковського 1, Одеса. Купуйте квитки тут!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+          rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.theme.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Національний Академічний Театр Одеса</title>
+</head>
+<body>
+<div class="intro animate__animated animate__fadeOutUp">
+    <div class="noise"></div>
+    <h1 class="intro__text fade-in">“Увесь світ - театр, а люди в нім - актори. І кожен там
+        свою роль грає” - <i>Вільям Шекспір</i></h1>
+</div>
+<div class="index">
+    <header>
+        <nav>
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="right">
+                            <a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="logo"></a>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                                <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="left">
+                            <div>
+                                <a href="#" class="search__calendar">
+                                    <img id="calendar" src="../images/icons/calendar.svg" alt="calendar">
+                                    <input type="text" id="datepicker" class="date"></a>
+                                <select name="performance__type">
+                                    <option value="">Вид вистави</option>
+                                    <option value="1">Балет</option>
+                                    <option value="2">Опера</option>
+                                </select>
+                            </div>
+                            <input class="header__search" type="search" id="header__search" placeholder="Знайти виставу..">
+                            <button class="header__btn">Пошук</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="filter hidden">
+        <div class="line"></div>
+        <div class="container-lg">
+            <div class="filter__flex">
+                <div class="filter__results">Результати пошуку: <u><i>Трубадур</i></u></div>
+                <a href="index.html" class="more">Очистити фільтр</a>
+            </div>
+        </div>
+        <!-- ЦЕ ФІЛЬТР, ВІН ЗАРАЗ ПРИХОВАНИЙ -->
+        <div class="affiches">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="date">24 вересня, 18:30</div>
+                            <img src="../images/photos/troubadour_small.png" alt="troubadour">
+                            <div class="card__title">Трубадур</div>
+                            <div class="card__subheader">Музика Джузеппе Верді</div>
+                            <div class="card__description">Опера на 4 дії</div>
+                            <div class="card__hash">#опери</div>
+                            <div class="card__price">
+                                <div>Ціна</div>
+                                <div>200-450 грн</div>
+                            </div>
+                            <a href="booking.html" class="card__buy">Купити квиток</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="date">26 вересня, 18:30</div>
+                            <img src="../images/photos/troubadour_small.png" alt="troubadour">
+                            <div class="card__title">Трубадур</div>
+                            <div class="card__subheader">Музика Джузеппе Верді</div>
+                            <div class="card__description">Опера на 4 дії</div>
+                            <div class="card__hash">#опери</div>
+                            <div class="card__price">
+                                <div>Ціна</div>
+                                <div>200-450 грн</div>
+                            </div>
+                            <a href="booking.html" class="card__buy">Купити квиток</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="main">
+        <section class="ban">
+            <div class="ban__content" style="background: url(../images/photos/mainpage_bg.png) center center/cover no-repeat">
+                <div class="container-lg">
+                    <h1 class="promo__header">Одеський національний академічний театр опери та балету</h1>
+                </div>
+            </div>
+            <div class="ban__content" style="background: url(../images/photos/viy.png) center center/cover no-repeat">
+                <div class="container-lg">
+                    <h1 class="promo__header">Одеський національний академічний театр опери та балету</h1>
+                </div>
+            </div>
+            <div class="ban__content" style="background: url(../images/photos/nabukko.png) center center/cover no-repeat">
+                <div class="container-lg">
+                    <h1 class="promo__header">Одеський національний академічний театр опери та балету</h1>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-sm-3 col-6">
+                        <div class="info__block">
+                            <div class="info__subheader">Дата заснування</div>
+                            <div class="info__text">1989 рік</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="info__block">
+                            <div class="info__subheader">2020-2021 роки</div>
+                            <div class="info__text">20 спектаклів</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <div class="info__block">
+                            <div class="info__subheader">Без обмежень</div>
+                            <div class="info__text">0+</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="about.html" class="more">Дізнатися більше</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="premiere">
+            <div class="container-lg">
+                <h2 class="subheader">Прем’єри</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="premiere__card" data-aos="fade-left" data-aos-duration="2000">
+                            <div class="date">24 вересня, 18:30</div>
+                            <div class="premiere__card__title">Жизель</div>
+                            <img src="../images/photos/giselle.png" alt="giselle">
+                            <a href="performance.html" class="premiere__card__detailed">Детальніше</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="premiere__card" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300">
+                            <div class="date">24 вересня, 18:30</div>
+                            <div class="premiere__card__title">Трубадур</div>
+                            <img src="../images/photos/troubadour.png" alt="troubadour">
+                            <a href="performance.html" class="premiere__card__detailed">Детальніше</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="premiere__card" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="600">
+                            <div class="date">24 вересня, 18:30</div>
+                            <div class="premiere__card__title">Шопеніана</div>
+                            <img src="../images/photos/shopeniana.png" alt="shopeniana">
+                            <a href="performance.html" class="premiere__card__detailed">Детальніше</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="hidden premiere__card" data-aos="fade-left" data-aos-duration="2000">
+                            <div class="date">24 вересня, 18:30</div>
+                            <div class="premiere__card__title">Жизель</div>
+                            <img src="../images/photos/giselle.png" alt="giselle">
+                            <a href="performance.html" class="premiere__card__detailed">Детальніше</a>
+                        </div>
+                    </div>
+                </div>
+                <!--            <a href="#" class="premiere__swipe"><img src="images/icons/premiere_right_swipe.png" alt="right-swipe"></a>-->
+            </div>
+        </section>
+
+        <div class="container-lg"><div class="separator"></div></div>
+
+        <section class="about" id="about__theatre">
+            <div class="container-lg">
+                <div class="about__content ">
+                    <div class="left">
+                        <h2 class="subheader">Про театр</h2>
+                        <div><p class="about__text" data-aos="fade-right" data-aos-duration="2000">
+                            Театральне життя в Одесі веде свою історію із перших днів існування міста. Національний академічний театр опери і
+                            балету можна назвати старійшиною серед цілого ряду його культурних пам’яток. Тут ви можете
+                            поринути у казковий та дивовижний світ, знайомство з яким справить незабутнє враження,
+                            розширить межі сприйняття світу і відкриє нові естетичні обрії. Класичні вистави у сучасній
+                            обробці змусять полюбити театр ще більше.
+                            <br> <br>
+                            Відкриття першої споруди театру відбулося 1810 року, але у 1873 році відбулася пожежа, через яку театр
+                            згорів. Сучасна будівля зведена 1887 року під керівництвом архітекторів Фердинанда Фельнера
+                            і Германа Гельмера («Бюро Фельнер & Гельмер») у стилі віденського бароко. Архітектура глядацького залу
+                            витримана в стилі пізнього французького рококо. <span>Унікальна акустика підковоподібного залу дозволяє доносити навіть шепіт
+                        зі сцени в будь-який куточок залу. Повну реставрацію будівлі театру завершили у 2007 році.</span></p>
+                        </div>
+                        <a href="about.html" class="more">Більше про історію театру</a>
+                    </div>
+                    <img src="../images/photos/about_page.png" data-aos="fade-left" data-aos-duration="2000" alt="theatre_outside">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container-lg">
+            <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+                <div class="footer__logo">
+                    <a href="index.html"><img src="../images/icons/logo-footer.png" alt="logo-footer"></a>
+                    <div class="theatre__title">Одеський національний академічний театр опери та балету</div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="menu__footer">
+                <div class="col-lg-3">
+                    <div class="contact">
+                        <div class="contact__title">Контакти:</div>
+                        <div class="contact__subtitle">Каси:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        <div class="contact__subtitle">Приймальня:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        <div class="contact__subtitle">Для преси:</div>
+                        <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="middle">
+                        <ul class="menu">
+                            <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                            <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                            <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                        </ul>
+                        <div class="subscription">
+                            <div class="subscription__text">Підпишіться на новини та анонси подій</div>
+                            <form action="">
+                                <input type="email" placeholder="Уведіть пошту..">
+                                <button class="subscription__subscribe">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="social">
+                        <div class="contact__title">Соціальні мережі:</div>
+                        <a href="#" class="social__link"><img src="../images/icons/instagram.svg" alt="instagram"></a>
+                        <a href="#" class="social__link"><img src="../images/icons/twitter.svg" alt="twitter"></a>
+                        <a href="#" class="social__link"><img src="../images/icons/facebook.svg" alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden menu__footer">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                        <div class="middle">
+                            <ul class="menu">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="affiche.html" class="menu__link">Афіша</a></li>
+                                <li class="menu__item"><a href="about.html" class="menu__link">Про театр</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="row">
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Каси:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Приймальня:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <div class="contact__subtitle">Для преси:</div>
+                            <a href="tel:38093169797" class="contact__phone">+38 (093) - 16 - 97 - 97</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-3 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/instagram.svg" alt="instagram"></a>
+                        </div>
+                        <div class="col-sm-2 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/twitter.svg" alt="twitter"></a>
+                        </div>
+                        <div class="col-sm-2 col-4">
+                            <a href="#" class="social__link"><img src="../images/icons/facebook.svg" alt="facebook"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscription">
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1">
+                            <div class="subscription__text">Підпишіться на новини та анонси подій</div>
+                            <form action="">
+                                <input type="email" placeholder="Уведіть пошту..">
+                                <button class="subscription__subscribe">Підписатися</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">©2022 Одеський Національний Академічний театр Опери та Балету. Всі права захищені.</div>
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="scripts/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js"></script>
+<script type="text/javascript" src="scripts/datepicker-uk.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({once:"true"});
+</script>
+</body>
+</html>

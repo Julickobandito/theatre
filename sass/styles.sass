@@ -1,0 +1,1930 @@
+$montserrat_text: #0B333E
+$source_serif_text: #B17C3D
+$montserrat_paragraph: #0A252D
+
+@mixin buy__btn
+    width: 184px
+    height: 50px
+    font-family: 'Montserrat'
+    border: none
+    color: #fff
+    text-align: center
+    padding: 11px 20px
+    font-weight: 600
+    font-size: 18px
+    letter-spacing: 0.2px
+    background: $source_serif_text
+@mixin blue__btn
+    width: 390px
+    height: 60px
+    background: #0D7D9C
+    border: 2px solid #0D7D9C
+    font-weight: 600
+    font-size: 18px
+    letter-spacing: 0.2px
+    color: #FFFFFF
+    display: block
+//body::-webkit-scrollbar
+//    display: none
+body
+    overflow-X: hidden
+.intro
+    background: url(../images/photos/ghosts.png) center center/cover no-repeat
+    min-height: 100%
+    min-width: 1024px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    margin: 0
+    z-index: 2000
+    animation: fadeOutUp
+    animation-delay: 6.5s
+    //&::-webkit-scrollbar
+    //    display: none
+    &__img
+        margin: auto
+        display: block
+        width: 300px
+    //img
+    //    width: 100%
+    &__text
+        display: block
+        margin: 0 auto
+        font-size: 60px
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 80%
+        transform: translate(-50%, -50%)
+        color: #FFFFFF
+        font-family: 'Source Serif 4'
+        z-index: 2000
+    .fade-in
+        animation: fadeIn
+        animation-delay: 1.5s
+        animation-duration: 2.5s
+        animation-fill-mode: forwards
+    .noise
+        //animation: fadeInUp
+        //animation-duration: 2s
+        &::before
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            content: ""
+            opacity: 0.2
+            z-index: 1000
+            pointer-events: none
+            filter: brightness(80%)
+            background: url(../images/photos/noise_2.gif)
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    10%
+        opacity: 1
+    90%
+        opacity: 1
+    to
+        opacity: 0
+
+.display-none
+    display: none
+
+.index
+    visibility: hidden
+.fade-in
+    opacity: 0
+    animation: fadeIn 1s ease-in
+header
+    font-family: 'Montserrat'
+    position: relative
+    nav
+        height: 70px
+        padding: 7px 0
+        display: flex
+        .right
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .logo
+                &:hover
+                    animation-name: logo_beat
+                    animation-duration: 2s
+        .left
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-left: 50px
+            padding-top: 8px
+            .search__calendar
+                #calendar
+                    display: none
+            .header__search
+                width: 270px
+                height: 40px
+                border: 1px solid #0B333E
+                font-weight: 400
+                font-size: 14px
+                letter-spacing: 0.2px
+                color: rgba(0, 0, 0, 0.5)
+                padding-left: 20px
+            .header__search:focus
+                border: 2px solid #0B333E
+                outline: none
+    #ui-datepicker-div
+        top: 70px
+    .menu
+        margin: 0
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+        &__link
+            font-weight: 600
+            font-size: 14px
+            line-height: 18px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+            text-decoration: none
+            margin: 0 35px
+        &__link:hover
+            color: $source_serif_text
+    select
+        border: none
+        font-weight: 600
+        font-size: 14px
+        letter-spacing: 0.2px
+        color: $montserrat_text
+        option
+            font-size: 14px
+    .header__btn
+        width: 100px
+        height: 40px
+        background: $source_serif_text
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.2px
+        color: #FFFFFF
+        border: none
+    .header__btn:hover
+        transition: 0.5s
+        background-color: #704a27
+
+.golden
+    border-bottom: 2px solid $source_serif_text
+a:hover
+    text-decoration: none
+    color: unset
+.filter
+    .line
+        border-top: 2px solid $source_serif_text
+    &__flex
+        margin: 45px 0 60px 0
+        color: $montserrat_text
+        display: flex
+        justify-content: space-between
+        .filter__results
+            font-family: 'Source Serif 4'
+            font-weight: 700
+            font-size: 18px
+            letter-spacing: 0.2px
+        .more
+            color: $montserrat_text
+            display: block
+            min-height: unset
+.ban
+    height: 570px
+    position: relative
+    display: flex
+    .slick-list, .slick-track
+        height: 570px
+    .ban__content
+        width: unset
+        position: relative
+    .ban__content img
+        width: unset
+        img
+            height: 100%
+            width: unset
+    .promo__header
+        position: absolute
+        bottom: 44px
+        img
+            width: 100%
+    .slick-prev, .slick-next
+        position: absolute
+        border: none
+        background: none
+        bottom: 44px
+        z-index: 2
+    .slick-prev
+        right: 15%
+    .slick-next
+        right: 10%
+    .slick-arrow
+        transition-timing-function: ease
+        transition: 0.5s
+    .slick-arrow:hover
+        transform: scale(1.1)
+    button
+        img
+            width: 55px
+    .promo__header
+        position: absolute
+        bottom: 44px
+
+.promo
+    min-height: 530px
+    background: url(../images/photos/mainpage_bg.png) center center/cover no-repeat
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    position: relative
+    &__header
+        font-family: 'Source Serif 4'
+        width: 920px
+        font-weight: 700
+        font-size: 60px
+        letter-spacing: 0.2px
+        color: #FFB84F
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        transform: translateY(-40px)
+        .swipe a
+            margin-right: 10px
+
+.more
+    font-weight: 600
+    font-size: 18px
+    color: $source_serif_text
+    text-align: end
+    display: flex
+    //justify-content: space-between
+    padding: 0
+    align-items: center
+    text-decoration: none
+    min-height: 120px
+    font-family: 'Montserrat'
+    letter-spacing: 0.2px
+    &:hover
+        color: #B17C3D
+    &:after
+        margin-left: 10px
+        content: ''
+        width: 60px
+        height: 1.6px
+        background: #B17C3D
+        left: 0
+        transition: left .3s ease-out,right .3s ease-out,width .3s ease-out
+    &:hover:after
+        width: 100px
+    &__block
+        padding: 15px 0
+    &__blocks
+        display: flex
+        justify-content: space-between
+        padding: 0
+        align-items: center
+    &__subheader
+        font-weight: 700
+        font-size: 12px
+        color: #818181
+    &__text
+        font-weight: 700
+        font-size: 24px
+        color: #0B333E
+    .more
+        padding: 37px 0
+
+.hidden
+    display: none
+
+.subheader
+    font-family: 'Source Serif 4'
+    font-weight: 700
+    font-size: 36px
+    letter-spacing: 0.2px
+    color: $source_serif_text
+
+.date
+    width: 144px
+    height: 29px
+    background: #B17C3D
+    padding: 5px 0
+    text-align: center
+    font-family: 'Montserrat'
+    font-weight: 600
+    font-size: 14px
+    color: #FFFFFF
+
+.info
+    height: 120px
+    display: flex
+    align-items: center
+    &:hover
+        box-shadow: 3px 3px 6px rgb(82, 134, 148)
+    &__block
+        font-family: 'Montserrat'
+        .info__subheader
+            font-weight: 700
+            font-size: 12px
+            letter-spacing: 0.2px
+            color: #818181
+            padding-top: 30px
+        .info__text
+            font-weight: 700
+            font-size: 24px
+            line-height: 24px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+.premiere
+    font-family: 'Montserrat'
+    //padding: 50px 0
+    min-height: 635px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .subheader
+        margin-bottom: 35px
+    &__card
+        position: relative
+        width: 340px
+        margin: 0 auto
+        animation: fadeInRight
+        transition-timing-function: ease
+        transition: 1s
+        &:hover
+            box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.3)
+            scale: 1.05
+        img
+            width: 100%
+        &__title
+            position: absolute
+            bottom: 92px
+            left: 30px
+            font-weight: 500
+            font-size: 20px
+            color: #FFFFFF
+        &__detailed
+            position: absolute
+            bottom: 24px
+            left: 50%
+            transform: translateX(-50%)
+            width: 276px
+            height: 50px
+            padding: 5px
+            text-decoration: none
+            border: 3px solid #FFFFFF
+            text-align: center
+            color: #FFFFFF
+            font-weight: 500
+            font-size: 20px
+            background: transparent
+        &__detailed:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: -2
+        &__detailed:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 0
+            height: 100%
+            background-color: #fff
+            transition: all .3s
+            z-index: -1
+        &__detailed:hover
+            padding: 9px
+            border: none
+            &:before
+                width: 100%
+
+
+    .date
+        position: absolute
+        left: 180px
+        top: 30px
+    .hidden
+        display: none
+
+.separator
+    border-bottom: 2px solid #B17C3D
+    margin: 20px 0
+
+.about
+    margin: 54px 0 178px 0
+    min-height: 565px
+    &__text
+        margin-top: 27px
+        width: 510px
+        height: 440px
+        font-family: 'Montserrat'
+        font-weight: 400
+        font-size: 18px
+        letter-spacing: 0.5px
+        line-height: 20px
+        margin-left: 50px
+    &__content
+        display: flex
+        justify-content: space-between
+    .more
+        margin-left: 50px
+        text-align: start
+        min-height: 60px
+    img
+        height: 100%
+        margin-right: 46px
+        transition-timing-function: ease
+        transition: 0.8s
+        &:hover
+            scale: 1.05
+            box-shadow: 2px 1px 15px 10px rgba(0, 0, 0, 0.25)
+.affiches
+    margin: 45px 0 90px 0
+    &__menu
+        margin: 68px 0 50px 0
+        display: flex
+        justify-content: space-between
+        li
+            list-style-type: none
+            font-family: 'Montserrat'
+            font-weight: 600
+            font-size: 16px
+            line-height: 18px
+            letter-spacing: 0.2px
+        a
+            text-decoration: none
+            color: $montserrat_paragraph
+        .active
+            color: $source_serif_text
+            font-weight: 700
+    .more
+        margin-right: 40px
+        text-align: end
+        display: block
+.card
+    img
+        width: 100%
+    width: 336px
+    height: 687px
+    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25)
+    padding: 0
+    border: 0
+    position: relative
+    display: block
+    margin: 0 auto 77px auto
+    //transition: 2s
+    transition: 0.8s
+    &:hover
+        scale: 1.05
+        box-shadow: 2px 1px 10px 10px rgba(0, 0, 0, 0.25)
+    .date
+        position: absolute
+        top: 24px
+        right: 12px
+    &__title
+        font-family: 'Source Serif 4'
+        font-weight: 600
+        font-size: 45px
+        color: $source_serif_text
+        position: absolute
+        left: 23px
+        bottom: 331px
+    &__subheader
+        font-family: 'Montserrat'
+        font-weight: 600
+        font-size: 18px
+        color: $montserrat_text
+        position: absolute
+        left: 23px
+        bottom: 276px
+    &__description
+        font-family: 'Montserrat'
+        font-weight: 600
+        font-size: 14px
+        color: $montserrat_text
+        position: absolute
+        left: 23px
+        bottom: 237px
+    &__hash
+        font-family: 'Montserrat'
+        font-weight: 600
+        font-size: 14px
+        text-transform: uppercase
+        color: $source_serif_text
+        position: absolute
+        left: 23px
+        bottom: 200px
+    &__price
+        display: flex
+        justify-content: space-between
+        font-family: 'Montserrat'
+        font-weight: 700
+        font-size: 18px
+        color: $montserrat_text
+        position: absolute
+        left: 23px
+        right: 23px
+        bottom: 140px
+    &__buy
+        border: none
+        width: 288px
+        height: 50px
+        background: #0D7D9C
+        font-family: 'Montserrat'
+        font-weight: 600
+        font-size: 18px
+        text-align: center
+        letter-spacing: 0.2px
+        color: #fff
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 50px
+        text-decoration: none
+        padding-top: 12px
+        transition: 0.5s
+        &:hover
+            color: #FFFFFF
+            background: #01607c
+
+.ui-datepicker
+    margin-top: 60px
+    z-index: 1000
+
+.hide
+    display: none
+.show
+    display: block
+
+.description__paragraph
+    font-family: 'Montserrat'
+    font-weight: 400
+    font-size: 18px
+    line-height: 20px
+    letter-spacing: 1.5px
+    color: $montserrat_paragraph
+
+.about__theatre
+    .about__text
+        animation: fadeInLeft
+    img
+        animation: fadeInRight
+
+.about__top
+    padding: 54px 0 45px 0
+    min-height: 606px
+    &__flex
+        display: flex
+        justify-content: space-between
+    img
+        height: 100%
+        padding-right: 10px
+    .description__paragraph
+        margin-top: 27px
+        padding-left: 66px
+        width: 590px
+.about__middle
+    min-height: 200px
+    .description__paragraph
+        padding-left: 66px
+.about__content__inside
+    min-height: 404px
+    margin: 42px 0
+    &__flex
+        display: flex
+        justify-content: space-between
+    img
+        padding-left: 60px
+        height: 100%
+    .description__paragraph
+        padding-left: 60px
+
+.about__bottom
+    margin-bottom: 170px
+    .description__paragraph
+        padding-left: 66px
+.data__payment
+    min-height: 620px
+    margin: 47px 0 130px 0
+    &__flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .more
+            color: $montserrat_text
+            min-height: unset
+    &__info
+        display: flex
+        justify-content: space-between
+        width: 930px
+        min-height: 485px
+        border: 1px solid $source_serif_text
+        margin: 0 auto
+        margin-top: 64px
+        &__subheader
+            font-weight: 600
+            font-size: 18px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+            margin-bottom: 50px
+        &__text
+            font-weight: 400
+            font-size: 14px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+        input
+            margin: 20px 0 28px 0
+        .bold
+            font-weight: 700
+        .flex
+            display: flex
+            justify-content: space-between
+        &__card
+            margin: 33px 0 0 33px
+            width: 330px
+            #card__name, #card__number
+                width: 326px
+                height: 36px
+                border: 1px solid $source_serif_text
+                font-weight: 400
+                padding-left: 22px
+                font-size: 14px
+                letter-spacing: 1.5px
+                color: rgba(0, 0, 0, 0.5)
+            #card__number
+                letter-spacing: 9px
+            .card__term
+                min-width: 155px
+            #card__month
+                width: 102px
+                height: 36px
+                ont-family: 'Montserrat'
+                border: 1px solid $source_serif_text
+                font-weight: 400
+                font-size: 14px
+                text-align: left
+                padding-left: 5px
+                letter-spacing: 0.2px
+                color: $montserrat_text
+            #card__year, #card_cvc
+                width: 86px
+                height: 36px
+                border: 1px solid $source_serif_text
+                font-weight: 400
+                font-size: 14px
+                letter-spacing: 5px
+                text-align: center
+                color: rgba(0, 0, 0, 0.5)
+            #card__year
+                margin-left: 15px
+            .card__cvc
+                text-align: center
+        &__line
+            width: 1px
+            background-color:  $source_serif_text
+        &__performance
+            margin: 33px 33px 0 0
+            width: 387px
+            .flex
+                margin-bottom: 40px
+        &__btn
+            @include blue__btn
+            margin-bottom: 34px
+            text-align: center
+            text-decoration: none
+            padding-top: 12px
+            transition: 0.5s
+            &:hover
+                color: #FFFFFF
+                background: #01607c
+
+.payment__personal
+    margin: 47px 0 109px 0
+    font-family: 'Montserrat'
+    .payment__data
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        //margin-bottom: 70px
+        .more
+            color: $montserrat_text
+    &__subheader
+        font-weight: 600
+        font-size: 18px
+        letter-spacing: 0.2px
+        color: $montserrat_text
+        margin-bottom: 10px
+    &__form
+        width: 388px
+        min-height: 316px
+        border: 1px solid $source_serif_text
+        padding: 33px 0 0 33px
+        input
+            width: 326px
+            height: 36px
+            border: 1px solid $source_serif_text
+            margin-top: 27px
+            padding-left: 22px
+            letter-spacing: 1.5px
+            color: rgba(0, 0, 0, 0.5)
+            font-size: 14px
+
+    &__choice
+        margin-top: 47px
+        width: 388px
+        min-height: 220px
+        border: 1px solid $source_serif_text
+        padding: 37px 0 0 33px
+        .payment__personal__subheader
+            margin-bottom: 37px
+        label
+            margin-bottom: 27px
+            font-size: 14px
+            padding-left: 17px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+    &__btn
+        @include blue__btn
+        text-decoration: none
+        padding-top: 12px
+        text-align: center
+        margin-top: 50px
+        transition: 0.5s
+        &:hover
+            color: #FFFFFF
+            background: #01607c
+    .electronic__ticket
+        width: 620px
+        min-height: 630px
+        box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25)
+        img
+            padding: 0
+            width: 100%
+        &__title
+            font-family: 'Source Serif 4'
+            font-weight: 600
+            font-size: 45px
+            color: #B17C3D
+            transform: translate(84px, -70px)
+            display: inline-block
+        &__flex
+            display: flex
+            justify-content: space-between
+        &__block
+            padding: 0 54px 0 84px
+            transform: translateY(-40px)
+        &__text
+            font-family: 'Montserrat'
+            font-size: 14px
+            font-weight: 600
+            color: $montserrat_text
+            margin-bottom: 22px
+        .bold
+            font-weight: 700
+            font-size: 18px
+.ellipse
+    width: 18px
+    height: 18px
+    border-radius: 100%
+    background: #C4C4C4
+.sold
+    background: #666
+.not__reserved
+    background: #C4C4C4
+.reserved
+    background: #D95335
+
+.booking
+    font-family: 'Montserrat'
+    &__flex
+        display: flex
+        justify-content: space-between
+        min-height: 100px
+        position: relative
+        align-items: center
+        &__date
+            width: 350px
+            height: 70px
+            font-weight: 700
+            font-size: 28px
+            letter-spacing: 0.2px
+            color: #FFFFFF
+            background-color: $source_serif_text
+            padding-top: 12px
+            text-align: center
+            right: 0
+            position: absolute
+    &__choice
+        margin: 90px 0 110px 0
+        &__subheader
+            font-weight: 600
+            font-size: 18px
+            letter-spacing: 0.2px
+            color: $montserrat_paragraph
+        &__hall
+            .booking__choice__subheader
+            text-align: center
+        &__stage
+            width: 225px
+            height: 36px
+            background: #FFB84F
+            font-weight: 700
+            font-size: 14px
+            text-align: center
+            letter-spacing: 0.2px
+            color: #FFFFFF
+            text-transform: uppercase
+            padding-top: 7px
+            margin: 24px auto
+        .booking__choice__range__number
+            font-weight: 600
+            font-size: 16px
+            letter-spacing: 0.2px
+            color: #282828
+            margin-right: 10px
+        &__places
+            margin-top: 25px
+            .range
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 0 auto
+                margin-bottom: 10px
+                .ellipse
+                    cursor: pointer
+                &__1
+                    width: 335px
+                &__2
+                    width: 370px
+                &__3, &__4, &__5, &__6, &__7
+                    width: 430px
+                &__8, &__9, &__10
+                    width: 451px
+                    .booking__choice__range__number
+                        margin-right: 7px
+                &__11, &__12
+                    width: 472px
+                &__13
+                    width: 240px
+                &__14
+                    width: 317px
+        &__text
+            margin: 30px 0
+            font-weight: 400
+            font-size: 14px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+            line-height: 25px
+        &__info
+            width: 200px
+            margin: 0 auto
+            &__price
+                font-weight: 600
+                font-size: 14px
+                letter-spacing: 0.2px
+                color: $montserrat_paragraph
+            &__prices
+                margin-top: 30px
+                &__flex
+                    width: 200px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-bottom: 15px
+                    .ellipse
+                        &__1
+                            background: #FF0000
+                        &__2
+                            background: #D95335
+                        &__3
+                            background: #FFB84F
+                        &__4
+                            background: #2F950C
+                        &__5
+                            background: #5378B0
+                        &__6
+                            background: #9B249D
+                        &__7
+                            background: #666666
+            &__places
+                margin: 33px 0
+                font-weight: 600
+                font-size: 18px
+                letter-spacing: 0.2px
+                color: $montserrat_paragraph
+        &__buttons
+            display: flex
+            justify-content: space-between
+            width: 410px
+            margin: 0 auto
+            transform: translateY(32px)
+            .booking__btn
+                @include blue__btn
+                width: 255px
+                text-decoration: none
+                padding-top: 12px
+                text-align: center
+                transition: 0.5s
+                &:hover
+                    color: #FFFFFF
+                    background: #01607c
+            .booking__cancel
+                width: 134px
+                text-decoration: none
+                padding-top: 15px
+                color: #282828
+                background: #C4C4C4
+                font-weight: 600
+                font-size: 18px
+                text-align: center
+                letter-spacing: 0.2px
+                transition: 0.5s
+                &:hover
+                    background: #9d9d9d
+footer
+    min-height: 625px
+    background: $montserrat_text
+    padding: 20px 0 90px 0
+    .footer__logo img
+        display: block
+        margin: 0 auto
+        &:hover
+            animation-name: logo_beat
+            animation-duration: 2s
+    .theatre__title
+        margin: 10px 0 28px 0
+        font-family: 'Source Serif 4'
+        font-weight: 700
+        font-size: 20px
+        text-align: center
+        letter-spacing: 0.2px
+        color: #FFFFFF
+    .separator
+        border-bottom: 1px solid #B17C3D
+        margin: 0
+    .menu__footer
+        margin-top: 56px
+        display: flex
+        font-family: 'Montserrat'
+        .contact
+            &__title
+                font-weight: 700
+                font-size: 18px
+                letter-spacing: 0.2px
+                color: #FFFFFF
+            &__subtitle
+                margin-top: 28px
+                font-weight: 600
+                font-size: 14px
+                letter-spacing: 0.2px
+                color: #FFFFFF
+            &__phone
+                font-weight: 600
+                font-size: 14px
+                letter-spacing: 0.2px
+                color: #FFB84F
+                text-decoration: none
+        .social
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            &__link
+                margin-top: 35px
+                img:hover
+                    animation-name: logo_beat
+                    animation-duration: 2s
+        .menu
+            display: flex
+            justify-content: space-between
+            font-weight: 600
+            font-size: 14px
+
+            letter-spacing: 0.2px
+            width: 350px
+            &__item
+                list-style-type: none
+            &__link
+                text-decoration: none
+                color: #FFB84F
+            a:hover
+                color: #fff
+        .subscription
+            width: 620px
+            &__text
+                margin-top: 70px
+                font-weight: 600
+                font-size: 18px
+                letter-spacing: 0.2px
+                text-transform: uppercase
+                color: #FFFFFF
+            form
+                margin-top: 30px
+                display: flex
+                justify-content: space-between
+            input
+                width: 406px
+                height: 36px
+                border: 1px solid $source_serif_text
+                background: none
+                padding-left: 16px
+                font-weight: 600
+                font-size: 14px
+                color: rgba(255, 255, 255, 0.6)
+                &:focus
+                    outline: none
+                    border: 2px solid $source_serif_text
+            &__subscribe
+                width: 190px
+                height: 36px
+                background: #FFFFFF
+                border: none
+                font-weight: 600
+                font-size: 14px
+                letter-spacing: 0.2px
+                text-transform: capitalize
+                color: #B17C3D
+                transition: 0.5s
+                &:hover
+                    background: rgba(177, 124, 61, 0.75)
+                    color: #FFFFFF
+        .middle
+            display: flex
+            flex-direction: column
+            align-items: center
+    .footer__copyright
+        font-weight: 600
+        font-size: 14px
+        letter-spacing: 0.5px
+        color: #FFFFFF
+        margin-top: 70px
+        text-align: center
+    .hidden
+        display: none
+
+#datepicker
+    display: none
+.banner
+    min-height: 415px
+    background: url(../images/photos/dancing_queens.png) center center/cover no-repeat
+
+.description
+    min-height: 120px
+    position: relative
+    &__name
+        padding: 21px 0
+    //.info__block
+    //    padding: 33px 0
+    &__type
+        font-family: 'Montserrat'
+        font-weight: 500
+        font-size: 18px
+        letter-spacing: 0.2px
+        color: rgba(7, 36, 94, 0.5)
+    &__buy
+        position: absolute
+        right: 0
+        @include buy__btn
+        margin: 35px 0
+        text-decoration: none
+    &__buy:hover
+        transition: 0.5s
+        color: #FFFFFF
+        background-color: #704a27
+.content
+    margin: 50px 0 116px 0
+    &__header
+        text-align: center
+        font-family: 'Source Serif 4'
+        font-weight: 600
+        font-size: 30px
+        letter-spacing: 0.2px
+        color: #0A252D
+    &__subheader
+        margin-top: 36px
+        font-size: 25px
+        font-family: 'Source Serif 4'
+        font-weight: 600
+        letter-spacing: 0.2px
+        color: #0A252D
+    &__text
+        margin-top: 25px
+        font-weight: 400
+        font-size: 14px
+        line-height: 18px
+        letter-spacing: 0.2px
+        color: #0B333E
+
+.payment__sent
+    margin: 47px 0 100px
+    min-height: 677px
+    &__flex
+        display: flex
+        justify-content: space-between
+        .more
+            color: $montserrat_text
+            display: block
+            margin: auto 0
+            min-height: unset
+    &__successfully
+        width: 658px
+        height: 581px
+        border: 1px solid #B17C3D
+        margin: 0 auto
+        margin-top: 47px
+        &__subheader
+            margin-top: 40px
+            font-family: 'Montserrat'
+            font-size: 36px
+            font-weight: 600
+            color: $montserrat_text
+            text-align: center
+        &__time
+            margin-top: 30px
+            font-family: 'Montserrat'
+            font-weight: 600
+            font-size: 18px
+            letter-spacing: 0.2px
+            color: $montserrat_text
+            text-align: center
+        &__print
+            @include blue__btn
+            margin: 0 auto
+            margin-top: 54px
+            transition: 0.5s
+            &:hover
+                color: #FFFFFF
+                background: #01607c
+        img
+            margin: 0 auto
+            margin-top: 50px
+            display: block
+
+    @keyframes logo_beat
+        from
+            transform: scale(1)
+        25%
+            transform: scale(1.1)
+        50%
+            transform: scale(1)
+        75%
+            transform: scale(1.2)
+        to
+            transform: scale(1)
+
+@media (min-width: 1201px) and (max-width: 1400px)
+    header
+        nav
+            .menu__link
+                margin: 0 28px
+            .left
+                margin: 0
+                .header__search
+                    width: 250px
+    .premiere
+        &__card
+            width: 330px
+    .content
+        margin-top: 35px
+    .affiches
+        .more
+            margin-right: 20px
+    .about__top
+        .description__paragraph
+            padding-left: 30px
+    .about__middle, .about__bottom
+        .description__paragraph
+            padding-left: 30px
+    .about__content__inside
+        img
+            padding-left: 20px
+        .description__paragraph
+            padding-left: 20px
+            span
+                display: none
+
+    footer
+        .menu__footer
+            .contact__phone
+                font-size: 13px
+            .contact__title
+                font-size: 15.5px
+            .social__link
+                &:not(:nth-child(1))
+                    margin-top: 42px
+                img
+                    width: 28px
+
+@media (max-width: 1200px)
+    .intro
+        &__text
+            font-size: 50px
+    header
+        nav
+            .menu__link
+                margin: 0 16px
+            .left
+                margin-left: 0
+                .header__search
+                    width: 190px
+                .header__btn
+                    width: 90px
+    .ban
+        button
+            img
+                width: 50px
+        .slick-next
+            right: 9%
+    .promo
+        &__header
+            font-size: 56px
+            width: 800px
+    .more
+        &:after
+            width: 30px
+        &:hover:after
+            width: 50px
+    .info
+        &__subheader
+            font-size: 11px
+        &__text
+            font-size: 22px
+        .more
+            font-size: 16px
+    .premiere
+        min-height: 540px
+        &__card
+            width: 300px
+            &__title
+                font-size: 19px
+            &__detailed
+                width: 246px
+                height: 46px
+                font-size: 18px
+        .date
+            left: 140px
+    .about
+        &__text
+            width: 420px
+            font-size: 17px
+            margin-left: 30px
+            span
+                display: none
+        img
+            margin-right: 0
+        .more
+            margin-left: 30px
+    .about__top
+        .description__paragraph
+            padding-left: 30px
+            width: 470px
+            span
+                display: none
+    .about__middle, .about__bottom
+        .description__paragraph
+            padding-left: 30px
+    .about__content__inside
+        img
+            padding-left: 0
+        .description__paragraph
+            padding-left: 20px
+            span
+                display: none
+    footer
+        .menu__footer
+            .contact
+                &__title
+                    font-size: 16px
+            .subscription
+                &__text
+                    margin-top: 40px
+                    text-align: center
+                    font-size: 16px
+                &__subscribe
+                    width: 100%
+                    margin-top: 10px
+                width: 440px
+                form
+                    display: flex
+                    flex-direction: column
+                    input
+                        width: 100%
+    .affiches
+        &__menu
+            margin: 30px 0 50px 0
+    .card
+        width: 300px
+        &__buy
+            width: 270px
+    .payment__personal
+        margin-top: 0
+        &__flex
+            margin-bottom: 30px
+        .electronic__ticket
+            width: 490px
+    .booking
+        &__choice
+            &__buttons
+                transform: unset
+                flex-direction: column
+                max-width: 290px
+                margin: 0 auto
+                .booking__btn
+                    width: 100%
+                .booking__cancel
+                    width: 100%
+                    height: 50px
+                    padding-top: 10px
+                    margin-top: 10px
+
+@media (max-width: 991px)
+    .intro
+        display: none
+    .index
+        visibility: visible
+    header
+        nav
+            min-height: 130px
+            .left
+                margin-top: 5px
+                .header__search
+                    width: 400px
+                .header__btn
+                    width: 160px
+    .ban
+        .slick-prev
+            right: 16%
+        .slick-next
+            right: 8%
+    .more
+        &:after
+            display: none
+    .promo
+        &__header
+            width: 600px
+            font-size: 50px
+    .info
+        min-height: 100px
+        &__subheader
+            font-size: 10px
+        &__text
+            font-size: 20px
+        .more
+            font-size: 14px
+    .subheader
+        font-size: 30px
+    .premiere
+        min-height: 435px
+        padding: 20px 0 0 0
+        &__swipe
+            width: 30px
+        .date
+            left: 200px
+        &__card
+            width: 360px
+            margin-bottom: 30px
+            &__title
+                left: 30px
+                bottom: 85px
+                font-size: 20px
+            &__detailed
+                width: 300px
+                height: 46px
+                font-size: 18px
+        .hidden
+            display: block
+    [data-aos-delay]
+        &.premiere__card
+            transition-delay: 0s !important
+    .about
+        margin-bottom: 130px
+        &__content
+            flex-direction: column
+        &__text
+            width: 96%
+            height: 100%
+            text-align: justify
+            margin: 30px 15px
+        .more
+            margin-left: 15px
+    .content
+        margin-top: 30px
+        &__text
+            text-align: justify
+    .description
+        &__buy
+            right: 12px
+            width: 160px
+            padding: 11px 14px
+            font-size: 16px
+    .about__top
+        &__flex
+            flex-direction: column
+        .description__paragraph
+            width: 98%
+            padding-left: 20px
+            text-align: justify
+            span
+                display: block
+        img
+            padding-left: 10px
+    .about__middle, .about__bottom
+        .description__paragraph
+            padding-left: 20px
+            width: 98%
+            text-align: justify
+    .about__content__inside
+        &__flex
+            flex-direction: column
+        img
+            padding-left: 10px
+        .description__paragraph
+            padding-left: 20px
+            width: 98%
+            text-align: justify
+    .data__payment
+        &__info
+            flex-direction: column
+            &__subheader
+                text-align: center
+                font-size: 20px
+            width: 90%
+            &__card
+                margin: 33px auto
+                width: 60%
+                #card__name, #card__number
+                    width: 100%
+                    height: 44px
+                .card__term
+                    width: 70%
+                    #card__year, #card__month
+                        width: 45%
+                        height: 44px
+                    #card__year
+                        margin-left: 5px
+                .card__cvc
+                    width: 30%
+                    #card_cvc
+                        width: 100%
+                        height: 44px
+
+            &__performance
+                margin: 33px auto
+                width: 70%
+            &__btn
+                width: 100%
+    .payment__personal
+        .payment__data
+            flex-direction: column-reverse
+        .electronic__ticket
+            width: 600px
+            margin-bottom: 40px
+        &__form, &__choice
+            width: 90%
+            margin: 0 auto
+            margin-bottom: 20px
+        &__form
+            margin-bottom: 30px
+            input
+                width: 94%
+                height: 44px
+        &__btn
+            width: 90%
+            padding-top: 15px
+            display: block
+            margin: 0 auto
+            margin-top: 40px
+    .booking
+        &__flex
+            .subheader
+            font-size: 32px
+            &__date
+                font-size: 25px
+                width: 320px
+                height: 60px
+        &__choice
+            &__info
+                width: 180px
+                text-align: right
+                &__places
+                    transform: translateX(18px)
+            &__buttons
+                width: 100%
+                .booking__btn, .booking__cancel
+                    width: 100%
+    .info
+        &__block
+            .info__text
+                font-size: 22px
+    footer
+        .menu__footer
+            .menu
+                width: 300px
+                padding-left: 0
+            .subscription
+                width: 330px
+            .contact
+                &__phone
+                    letter-spacing: 0
+                &__title
+                    font-size: 15px
+
+
+@media (max-width: 767px)
+    header
+        nav
+            .left
+                .header__search
+                    width: 50%
+                .header__btn
+                    width: 100px
+    .info
+        &__block
+            .info__text
+                font-size: 15px
+        .more
+            padding: 30px 0
+            font-size: 12px
+    .ban
+        button
+            img
+                display: none
+    .promo
+        &__content
+            flex-direction: column
+        &__header
+            font-size: 46px
+            width: 100%
+
+    .premiere
+        &__card
+            width: 250px
+        &__card__title
+            left: 15px
+        &__card__detailed
+            width: 230px
+            font-size: 16px
+            padding: 8px
+        .date
+            left: 96px
+            font-size: 13px
+    .description
+        &__name
+            padding: 10px 0
+            .subheader
+                font-size: 26px
+        &__type
+            font-size: 16px
+        //.info__block
+        //    .info__subheader
+        //        font-size: 14px
+        //    .info__text
+        //        font-size: 22px
+        &__buy
+            position: static
+            width: 100%
+            height: 56px
+            padding: 14px 14px
+            font-size: 16px
+            display: block
+            margin: 25px auto
+    .affiches
+        &__menu
+            padding: 0
+            li
+                font-size: 15px
+        .more
+            text-align: center
+            font-size: 22px
+            margin-right: 0
+    .card
+        width: 400px
+        height: 750px
+        margin-bottom: 50px
+        &__buy
+            width: 380px
+            height: 60px
+            bottom: 40px
+    .payment__sent
+        &__successfully
+            width: 540px
+            &__subheader
+                font-size: 28px
+
+    .payment__personal
+        .electronic__ticket
+            width: 500px
+            &__title
+                transform: translate(50px, -60px)
+            &__block
+                padding: 0 54px 0 54px
+    footer
+        .menu__footer
+            display: none
+        .hidden
+            display: block
+            .contact
+                &__subtitle
+                    padding-left: 16px
+                &__phone
+                    padding-left: 16px
+                    font-size: 13px
+            .social
+                display: block
+                margin-top: 20px
+                &__link
+                    padding-left: 10px
+                    img
+                        display: block
+                        width: 40px
+                        margin: 0 auto
+            .subscription
+                width: 100%
+    .booking
+        &__flex
+            .subheader
+            margin-bottom: 20px
+            font-size: 34px
+            &__date
+                width: 100%
+        &__choice
+            margin-top: 120px
+            &__info
+                width: unset
+                &__hours
+                    display: none
+                &__prices
+                    display: flex
+                    margin: 40px 0
+                    &__flex
+                        display: flex
+                        flex-direction: column
+                        span
+                            display: none
+                &__places
+                    transform: unset
+                    text-align: center
+            &__buttons
+                max-width: unset
+    .ui-datepicker
+        margin-top: 50px
+
+@media (max-width: 576px)
+    header
+        select
+            font-size: 12px
+        nav
+            min-height: 210px
+            .right
+                .logo
+                    img
+                        width: 40px
+                .menu__link
+                    margin: 0 10px
+                    font-size: 12px
+            .left
+                flex-direction: column
+                div
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                .header__btn, .header__search
+                    margin-top: 8px
+                    width: 98%
+                    font-size: 12px
+                .header__btn
+                    margin-top: 12px
+    .ban
+        .promo__header
+            bottom: 190px
+        .ban__content:nth-child(1)
+            background: url(../images/photos/mainpage_bg.png) left center/cover no-repeat
+
+    .promo
+        background: url(../images/photos/mainpage_bg.png) left center/cover no-repeat
+        &__content
+            flex-direction: column
+            transform: translateY(-130px)
+        &__header
+            width: 90%
+            font-size: 35px
+            text-align: center
+            margin: 0 auto
+        .swipe
+            display: none
+    .info
+        height: 70px
+        margin: 20px 0
+        .more
+            display: none
+        &__block
+            text-align: left
+            margin-top: 10px
+            .info__text
+                font-size: 15px
+            .info__subheader
+                font-size: 10px
+                padding-top: 0
+    .premiere
+        padding-top: 0
+        .date
+            left: 120px
+        &__card
+            width: 280px
+        &__card__detailed
+            width: 246px
+    .subheader
+        font-size: 25px
+    .about
+        &__text
+            font-size: 14px
+            margin: 20px 10px 10px 10px
+        .more
+            font-size: 15px
+        img
+            width: 100%
+    .description
+        &__name
+            padding: 8px 0
+        .info__block
+            padding: 8px 0
+            .info__subheader
+                font-size: 10px
+                padding-top: 0
+            .info__text
+                font-size: 15px
+        &__buy
+            margin: 25px 0
+
+    .affiches
+        &__menu
+            padding: 3px
+        .more
+            font-size: 16px
+            min-height: unset
+    .card
+        width: 300px
+        height: 687px
+        &__buy
+            width: 270px
+            padding-top: 15px
+            font-size: 16px
+        &:hover
+            scale: unset
+            box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25)
+    .about__top
+        .description__paragraph
+            padding-left: 10px
+            font-size: 14px
+        img
+            padding-left: 5px
+    .about__middle, .about__bottom
+        .description__paragraph
+            padding-left: 10px
+            font-size: 14px
+    .about__content__inside
+        .description__paragraph
+            padding-left: 10px
+            font-size: 14px
+        img
+            padding-left: 5px
+    .payment__sent
+        margin-top: 20px
+        min-height: 550px
+        .subheader
+            margin: 25px 0
+        &__flex
+            flex-direction: column
+            .more
+                display: none
+        &__successfully
+            width: 94%
+            height: 500px
+            margin-top: 0
+            &__subheader
+                font-size: 22px
+            &__time
+                font-size: 14px
+            &__print
+                width: 268px
+                height: 50px
+            img
+                width: 150px
+        .hidden
+            min-height: unset
+            display: block
+            color: $montserrat_text
+            margin: 30px 10px
+    .data__payment
+        margin-bottom: 50px
+        .more
+            display: none
+        &__info
+            margin-top: 30px
+            width: 98%
+            &__card, &__performance
+                width: 90%
+                #card__number
+                    letter-spacing: 7px
+            &__performance
+                margin-top: 10px
+        .hidden
+            display: block
+            margin: 30px
+            color: $montserrat_text
+            text-align: center
+
+    .payment__personal
+        .subheader
+            margin-top: 30px
+        &__flex
+            .more
+                display: none
+        &__form, &__choice, &__btn
+            width: 98%
+        .hidden
+            display: block
+            text-align: center
+            margin: 40px 0
+            min-height: unset
+            color: $montserrat_text
+        .electronic__ticket
+            min-height: 300px
+            width: 300px
+            &__title
+                transform: translate(20px, -35px)
+                font-size: 30px
+            &__block
+                padding: 0 20px 0 20px
+                transform: translateY(-10px)
+            &__text
+                font-size: 12px
+                margin-bottom: 18px
+            .bold
+                font-size: 16px
+    .booking
+        &__flex
+            .subheader
+                text-align: center
+                font-size: 32px
+            &__date
+                font-size: 23px
+        &__choice
+            .ellipse
+                width: 12px
+                height: 12px
+            &__places
+                .range
+                    .booking__choice__range__number
+                        font-size: 12px
+                    &__1
+                        width: 230px
+                    &__2
+                        width: 254px
+                    &__3, &__4, &__5, &__6, &__7
+                        width: 282px
+                    &__8, &__9, &__10
+                        width: 300px
+                    &__11, &__12
+                        width: 312px
+                    &__13
+                        width: 160px
+                    &__14
+                        width: 210px
+                    &__10, &__11, &__12, &__13, &__14
+                        .booking__choice__range__number
+                            margin-right: 8px
+            &__info
+                &__prices
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    margin: 30px 0
+                    &__flex
+                        width: 30%
+    footer
+        .theatre__title
+            font-size: 18px
+        .hidden
+            .contact
+                &__subtitle
+                    padding-left: 10px
+                &__phone
+                    padding-left: 10px
+                    font-size: 11px
+            .footer__copyright
+                font-size: 12px
